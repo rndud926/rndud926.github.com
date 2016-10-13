@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Cmake study1</title>
-  <meta name="description" content="한글도되냐?#include &lt;iostream&gt;int main(void){    cout &lt;&lt; "Hello World" &lt;&lt; endl;    return 0;}">
+  <title>Cmake - Hello World</title>
+  <meta name="description" content="cmakecmake_minimum_required(VERSION 3.6)project(cmake)set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")set(SOURCE_FILES main.cpp)add_executable(hello ${SO...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/update/2016/10/03/cmake-tutorial-first.html">
@@ -61,20 +61,38 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Cmake study1</h1>
+    <h1 class="post-title" itemprop="name headline">Cmake - Hello World</h1>
     <p class="post-meta"><time datetime="2016-10-03T16:46:42+09:00" itemprop="datePublished">Oct 3, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>한글도되냐?</p>
+    
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh">cmake
+cmake_minimum_required<span class="o">(</span>VERSION 3.6<span class="o">)</span>
+project<span class="o">(</span>cmake<span class="o">)</span>
 
-<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include &lt;iostream&gt;
+<span class="nb">set</span><span class="o">(</span>CMAKE_CXX_FLAGS <span class="s2">"</span><span class="k">${</span><span class="nv">CMAKE_CXX_FLAGS</span><span class="k">}</span><span class="s2"> -std=c++11"</span><span class="o">)</span>
+
+<span class="nb">set</span><span class="o">(</span>SOURCE_FILES main.cpp<span class="o">)</span>
+add_executable<span class="o">(</span>hello <span class="k">${</span><span class="nv">SOURCE_FILES</span><span class="k">}</span><span class="o">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="n">main</span><span class="p">.</span><span class="n">cpp</span>
+<span class="cp">#include &lt;iostream&gt;
 </span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello World"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
+
+<p><img src="/downloads/cmake1_01.png" alt="kind-screenshot" /></p>
+
+<p>cmake .</p>
+
+<p>make</p>
+
+<p>./hello</p>
+
 
   </div>
 
@@ -127,6 +145,7 @@
   </div>
 -->
   <div id="disqus_thread"></div>
+<!--  
   <script>
 
   /**
@@ -138,15 +157,17 @@
       this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
   };
   */
+
   (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
       s.src = '//han-github.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
   })();
+  
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                      
+                                      -->
 
 </footer>
 
